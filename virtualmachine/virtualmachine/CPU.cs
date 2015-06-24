@@ -9,9 +9,16 @@ namespace virtualmachine
 
     class CPU
     {
+        Core[] m_cores;
+        public CPU()
+        { 
+            m_cores = new Core[1];
+            m_cores[0] = new Core();
+        }
         public void Tick()
         {
-            int a = 0;
-        }
+            m_cores[0].Tick();
+                   }
+        
     }
 }

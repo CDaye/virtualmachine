@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Core.cs" />
     <Compile Include="CPU.cs" />
+    <Compile Include="InstructionFetchUnit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

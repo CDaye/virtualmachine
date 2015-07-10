@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BIOS.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="CPU.cs" />
     <Compile Include="InstructionFetchUnit.cs" />

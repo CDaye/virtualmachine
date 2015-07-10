@@ -9,9 +9,11 @@ namespace virtualmachine
     class Program
     {
         static CPU m_cpu;
+        static BIOS m_BIOS;
         static void Main(string[] args)
         {
-            m_cpu = new CPU();
+            m_BIOS = new BIOS();
+            m_cpu = new CPU(m_BIOS);
             bool running = true;
             while (running)
             {

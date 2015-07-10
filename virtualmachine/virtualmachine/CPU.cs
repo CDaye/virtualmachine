@@ -10,10 +10,12 @@ namespace virtualmachine
     class CPU
     {
         Core[] m_cores;
-        public CPU()
-        { 
+        BIOS m_BIOS;
+        public CPU(BIOS bios)
+        {
             m_cores = new Core[1];
-            m_cores[0] = new Core();
+            m_BIOS = bios;
+            m_cores[0] = new Core(m_BIOS);
         }
         public void Tick()
         {

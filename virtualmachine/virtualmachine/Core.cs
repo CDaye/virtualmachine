@@ -31,7 +31,13 @@ namespace virtualmachine
                 public void Tick()
         {
             m_fetchUnit.Tick(this);
+            m_arithmaticLogicUnit.Tick();
+            m_instructionDispatchUnit.Tick();
+            m_loadUnit.Tick();
+            m_storeUnit.Tick();
             m_pipelineStage = m_nextStage;
+
+
         }
     }
     enum PipelineStages

@@ -41,12 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArithmeticLogicUnit.cs" />
     <Compile Include="BIOS.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="CPU.cs" />
+    <Compile Include="InstructionDispatchUnit.cs" />
     <Compile Include="InstructionFetchUnit.cs" />
+    <Compile Include="LoadUnit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreUnit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

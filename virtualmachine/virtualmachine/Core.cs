@@ -14,6 +14,10 @@ namespace virtualmachine
         InstructionFetchUnit m_fetchUnit;
         public PipelineStages m_nextStage;
         BIOS m_BIOS;
+        ArithmeticLogicUnit m_arithmaticLogicUnit;
+        InstructionDispatchUnit m_instructionDispatchUnit;
+        LoadUnit m_loadUnit;
+        StoreUnit m_storeUnit;
 
         public Core(BIOS bios)
         {

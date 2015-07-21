@@ -8,9 +8,14 @@ namespace virtualmachine
 {
     class InstructionDispatchUnit
     {
+        public void SetInstruction(int instruction) 
+        {
+            int a = 0;
+        }
+ 
         public InstructionDispatchUnit()
-        { 
-
+        {
+           
         }
         public void Tick()
         {

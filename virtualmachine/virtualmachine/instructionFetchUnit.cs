@@ -9,14 +9,17 @@ namespace virtualmachine
     class InstructionFetchUnit
     {
         BIOS m_BIOS;
-        public InstructionFetchUnit(BIOS bios)
+        InstructionDispatchUnit m_instructionDispatchUnit;
+        public InstructionFetchUnit(BIOS bios, InstructionDispatchUnit instructionDispatchUnit)
         {
             m_BIOS = bios;
+            m_instructionDispatchUnit = instructionDispatchUnit;
         }
         public void Tick(Core m_core) 
         {
-            int instruction = m_BIOS.GetData((int)m_core.m_isntructionPointer);
-            m_core.m_isntructionPointer++;
+            int instruction = m_BIOS.GetData((int)m_core.m_instructionPointer);
+            m_instructionDispatchUnit.SetInstruction(instruction);
+            m_core.m_instructionPointer++;
         }
     }
 }

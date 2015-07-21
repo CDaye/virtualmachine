@@ -9,7 +9,7 @@ namespace virtualmachine
     class Core
     {
        
-        public uint m_isntructionPointer;
+        public uint m_instructionPointer;
         public PipelineStages m_pipelineStage;
         InstructionFetchUnit m_fetchUnit;
         public PipelineStages m_nextStage;
@@ -22,10 +22,15 @@ namespace virtualmachine
         public Core(BIOS bios)
         {
             m_BIOS = bios;
-            m_isntructionPointer = 0;
+            m_instructionPointer = 0;
             m_pipelineStage = PipelineStages.InstructionFetch;
-            m_fetchUnit = new InstructionFetchUnit(m_BIOS);
+            m_instructionDispatchUnit = new InstructionDispatchUnit();
+            m_fetchUnit = new InstructionFetchUnit(m_BIOS, m_instructionDispatchUnit);
             m_nextStage = PipelineStages.InstructionFetch;
+            m_arithmaticLogicUnit=new ArithmeticLogicUnit();
+            m_loadUnit= new LoadUnit ();
+            m_storeUnit = new StoreUnit();
+
                      
         }
                 public void Tick()

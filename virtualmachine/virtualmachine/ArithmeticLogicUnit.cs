@@ -12,10 +12,9 @@ namespace virtualmachine
         {
 
         }
-               public void Tick()
-               {
+        public void Tick()
+        {
 
-               }
-        
+        }
     }
 }

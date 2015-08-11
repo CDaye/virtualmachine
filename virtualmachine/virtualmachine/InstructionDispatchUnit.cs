@@ -8,7 +8,7 @@ namespace virtualmachine
 {
     class InstructionDispatchUnit
     {
-        public void SetInstruction(int instruction) 
+        public void SetInstruction(int instruction, int instructionPart2) 
         {
             int a = 0;
         }
